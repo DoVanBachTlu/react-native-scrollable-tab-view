@@ -1,4 +1,5 @@
 const React = require('react');
+import PagerView from 'react-native-pager-view';
 const ReactNative = require('react-native');
 const DeprecatedPropTypes = require('deprecated-react-native-prop-types');
 const createReactClass = require('create-react-class');
@@ -22,7 +23,8 @@ const DefaultTabBar = require('./DefaultTabBar');
 const ScrollableTabBar = require('./ScrollableTabBar');
 
 const AnimatedViewPagerAndroid = Platform.OS === 'android' ?
-  Animated.createAnimatedComponent(ViewPager) :
+  // Animated.createAnimatedComponent(ViewPager) :
+  Animated.createAnimatedComponent(PagerView) :
   undefined;
 
 const ScrollableTabView = createReactClass({
